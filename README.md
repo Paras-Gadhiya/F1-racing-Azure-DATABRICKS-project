@@ -19,39 +19,39 @@ Step-1: Get your Data from "http://ergast.com/mrd/db/#csv" and Store it Into DBF
 ------------------------------------------------------------------------------------------------------------------------------------
 Step-2: Ingest 4 Fies with Fully loaded and other 4 Files "Incrementally Load"  via Pyspark notebook into spark Dataframe.
 
- #^ CSV (Single File, Multiple Files)
+ * CSV (Single File, Multiple Files)
  * JSON (Multi-Line, Single-Line  && Single File, Multiple Files)
 [Note: Here, we Ingest data From Multiple formats and types]
 
 Step-2: Transformation 
 ------------------------------------------------------------------------------------------------------------------------------------
-Combine columns i.e. 'forename' and 'surname'
-Filter Columns data i.e. 'points'>=0 and others.
-Window, Grouped, Simple Aggregation i.e. windows RANK() (give ranking to Drivers and Teams)
-Join multiple data frames to make Ideal Data.
-Add Audit columns i.e. current_timestamp()
-Create Dependency between columns i.e. 'points' Dependent on 'positions'
-Add a column for storing data received via notebook parameters i.e. 'file_source', 'file_date'
-Drop Unwanted columns i.e. 'URL'
-Rename columns for better Understanding 'DriverID' =>'driver_id' (More Pythonic manner)
+ * Combine columns i.e. 'forename' and 'surname'
+ * Filter Columns data i.e. 'points'>=0 and others.
+ * Window, Grouped, Simple Aggregation i.e. windows RANK() (give ranking to Drivers and Teams)
+ * Join multiple data frames to make Ideal Data.
+ * Add Audit columns i.e. current_timestamp()
+ * Create Dependency between columns i.e. 'points' Dependent on 'positions'
+ * Add a column for storing data received via notebook parameters i.e. 'file_source', 'file_date'
+ * Drop Unwanted columns i.e. 'URL'
+ * Rename columns for better Understanding 'DriverID' =>'driver_id' (More Pythonic manner)
 
 Step-3: Load Transformed data into different formats (.parquet & .delta)  
 ------------------------------------------------------------------------------------------------------------------------------------
-External Tables
-Managed Tables
-Delta lake tables
-[Note: Here, we store that data into all above 3 in separate locations]
+ * External Tables
+ * Managed Tables
+ * Delta lake tables
+ [Note: Here, we store that data into all above 3 in separate locations]
 
 Step-4: Analysis 
 ------------------------------------------------------------------------------------------------------------------------------------
-Top -5 drivers
-Top -5 Teams
-Top -5 races
-Popular Circuits
+ * Top-5 drivers
+ * Top-5 Teams
+ * Top-5 races
+ * Popular Circuits(race tracks)
 
-Step-6: Schedule and execute Databricks Notebook with Aure Data Factory.
+Step-5: Schedule and execute Databricks Notebook with Aure Data Factory.
 ------------------------------------------------------------------------------------------------------------------------------------
-Develop parameterized Pipelines
-schedule tumbling window trigger for specify Runtime
-Handle Pipeline Failure with other data factory activity i.e. getMetaData, if..else.
+ * Develop parameterized Pipelines
+ * Schedule tumbling window trigger for specify Runtime
+ * Handle Pipeline Failure with other data factory activity i.e. getMetaData, if..else.
 
