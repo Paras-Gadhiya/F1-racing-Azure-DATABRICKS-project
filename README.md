@@ -1,8 +1,8 @@
 # F1-racing-Azure-DATABRICKS-project
 In this project, we used the Azure cloud services to get done data engineering operations (Ingestion, Transformation, Analysis, Load) on Formula-1 Racing Dataset Available from 'eargst developer API' which includes both 'CSV' and 'JSON' (single and also split) files. we also manage the incremental load and full load approach to dealing with some of that files and the notebook workflow via Azure Data Factory pipelines and  Azure Databricks Itself. we schedule that pipelines with tumbling window trigger to get execute that pipeline. but let's discuss this in a more granular manner.
 
-Problem:
------------------
+Try to address these Problems:
+----------------------------------
 1. Need an Automated system that can handle hybrid load (full + Incremental).
 2. update and delete certain data and also can restore that data as original state.
 3. Data comes periodically (i.e. every sunday)
