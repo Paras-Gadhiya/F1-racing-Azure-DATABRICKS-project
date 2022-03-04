@@ -21,7 +21,8 @@ Step-2: Ingest 4 Fies with Fully loaded and other 4 Files "Incrementally Load" 
 
  * CSV (Single File, Multiple Files)
  * JSON (Multi-Line, Single-Line  && Single File, Multiple Files)
-*[Note: Here, we Ingest data From Multiple formats and types]
+
+> [Note: Here, we Ingest data From Multiple formats and types]
 
 Step-2: Transformation 
 ------------------------------------------------------------------------------------------------------------------------------------
@@ -40,7 +41,8 @@ Step-3: Load Transformed data into different formats (.parquet & .delta)  
  * External Tables
  * Managed Tables
  * Delta lake tables
- *[Note: Here, we store that data into all above 3 in separate locations]
+ 
+ > [Note: Here, we store that data into all above 3 in separate locations]
 
 Step-4: Analysis 
 ------------------------------------------------------------------------------------------------------------------------------------
