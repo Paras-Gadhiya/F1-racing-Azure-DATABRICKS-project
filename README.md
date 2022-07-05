@@ -39,7 +39,7 @@ Step-2: Transformation 
  * Add Audit columns i.e. current_timestamp().
  * Create Dependency between columns i.e. 'points' Dependent on 'positions'.
  * Add a column for storing data received via notebook parameters i.e. 'file_source', 'file_date'.
- * Drop Unwanted columns i.e. ~~'URL', 'altitude', 'longotude'.
+ * Drop Unwanted columns i.e. ~~'URL', 'altitude', 'longitude'.
  * Rename columns for better Understanding 'DriverID' =>'driver_id' (More Pythonic manner)
 
 Step-3: Load Transformed data into different formats (.parquet & .delta)  
